@@ -88,12 +88,15 @@ O projeto também persiste artefatos intermediários e finais:
 - `row_count = 1400`
 - `positive_rate = 0.5050`
 - `selected_model = logistic_regression`
-- `logistic_regression roc_auc = 0.7959`
-- `logistic_regression average_precision = 0.7971`
-- `linear_svc roc_auc = 0.7960`
-- `linear_svc average_precision = 0.7967`
-- `random_forest roc_auc = 0.7454`
-- `random_forest average_precision = 0.7545`
+
+Resumo executivo do leaderboard:
+
+- `logistic_regression`
+  `roc_auc = 0.7959 | average_precision = 0.7971 | f1 = 0.7101`
+- `linear_svc`
+  `roc_auc = 0.7960 | average_precision = 0.7967 | f1 = 0.7387`
+- `random_forest`
+  `roc_auc = 0.7454 | average_precision = 0.7545 | f1 = 0.6628`
 
 ### Observações de benchmark
 
@@ -143,9 +146,12 @@ This repository mirrors that mindset with a local benchmark that persists artifa
 - `row_count = 1400`
 - `positive_rate = 0.5050`
 - `selected_model = logistic_regression`
-- `logistic_regression roc_auc = 0.7959`
-- `logistic_regression average_precision = 0.7971`
-- `linear_svc roc_auc = 0.7960`
-- `linear_svc average_precision = 0.7967`
-- `random_forest roc_auc = 0.7454`
-- `random_forest average_precision = 0.7545`
+
+Executive leaderboard summary:
+
+- `logistic_regression`
+  `roc_auc = 0.7959 | average_precision = 0.7971 | f1 = 0.7101`
+- `linear_svc`
+  `roc_auc = 0.7960 | average_precision = 0.7967 | f1 = 0.7387`
+- `random_forest`
+  `roc_auc = 0.7454 | average_precision = 0.7545 | f1 = 0.6628`
