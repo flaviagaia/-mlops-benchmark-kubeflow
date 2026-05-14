@@ -4,18 +4,6 @@
 
 `mlops-benchmark-kubeflow` é um benchmark de MLOps organizado com a mentalidade de `Kubeflow Pipelines`, comparando múltiplos modelos em uma DAG com componentes explícitos de ingestão, validação, preparação, treino, avaliação e registro.
 
-### Storytelling técnico
-
-Em MLOps, benchmark não é apenas uma tabela de métricas. Para ser útil em produção, ele precisa nascer dentro de um fluxo reexecutável, em que cada componente deixe rastros claros dos dados usados, das métricas produzidas e do artefato promovido ao final. É esse tipo de disciplina operacional que ferramentas como Kubeflow ajudam a organizar.
-
-Este projeto foi desenhado para mostrar exatamente isso. Em vez de treinar modelos em um notebook isolado, ele estrutura a comparação entre candidatos como uma DAG:
-
-- ingestão do dataset;
-- validação estrutural;
-- split controlado;
-- treino de múltiplos candidatos;
-- avaliação com métrica de seleção;
-- registro do modelo vencedor.
 
 ### Como pensar este benchmark com mentalidade Kubeflow
 
@@ -30,17 +18,17 @@ Este repositório traduz essa ideia para um benchmark supervisionado em que os c
 
 ### Componentes
 
-- [src/data_factory.py](/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/-mlops-benchmark-kubeflow/src/data_factory.py)
+- [src/data_factory.py](src/data_factory.py)
   gera e persiste a base sintética bruta;
-- [src/components.py](/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/-mlops-benchmark-kubeflow/src/components.py)
+- [src/components.py](src/components.py)
   implementa os componentes de ingestão, validação, preparação, treino, avaliação e registro;
-- [src/pipeline_runner.py](/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/-mlops-benchmark-kubeflow/src/pipeline_runner.py)
+- [src/pipeline_runner.py](src/pipeline_runner.py)
   executa a DAG localmente em ordem determinística;
-- [pipeline.py](/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/-mlops-benchmark-kubeflow/pipeline.py)
+- [pipeline.py](pipeline.py)
   escreve a especificação declarativa do pipeline no estilo Kubeflow;
-- [main.py](/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/-mlops-benchmark-kubeflow/main.py)
+- [main.py](main.py)
   consolida execução e materializa a referência do spec;
-- [tests/test_pipeline.py](/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/-mlops-benchmark-kubeflow/tests/test_pipeline.py)
+- [tests/test_pipeline.py](tests/test_pipeline.py)
   valida o contrato mínimo do benchmark.
 
 ### DAG
